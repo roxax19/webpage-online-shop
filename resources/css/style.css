@@ -1,0 +1,577 @@
+header {
+	border: 1px solid black;
+
+	width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+	left: 0; /* Posicionamos la cabecera al lado izquierdo */
+	top: 0; /* Posicionamos la cabecera pegada arriba */
+	position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+
+	z-index: 10;
+
+	display: -webkit-flex;
+	display: flex;
+	align-items: flex-start; /* flex-stretch */
+	align-items: stretch;
+
+	height: 80px;
+
+	/*background: #0288d1;*/
+	/*background: linear-gradient(to right, #0288d1 0%, #5eb8ff 50%, #0288d1 100%);*/
+	/*cambiar el gradiente, oscuro fuera y claro dentro a ver*/
+	background: #0288d1 0%;
+	color: white;
+}
+
+#sandwich {
+	order: 1;
+	flex: 0 0 70px;
+
+	display: flex;
+	align-items: flex-start; /* flex-stretch */
+	align-items: center;
+	justify-content: center;
+}
+
+.botonHeader {
+	width: 60%;
+}
+
+.botonHeader:hover {
+	width: 70%;
+}
+
+#logo {
+	order: 1;
+	flex: 0 0 100px;
+
+	display: flex;
+	align-items: flex-start; /* flex-stretch */
+	align-items: center;
+	justify-content: center;
+}
+
+#logo > * > a:link,
+#logo > * > a:visited {
+	text-decoration: none;
+	color: white;
+}
+#logo > * > a:hover,
+#logo > * > a:active {
+	text-decoration: none;
+	color: white;
+	font-size: 110%;
+}
+
+#busqueda {
+	order: 1;
+	flex: auto;
+	align-items: center;
+
+	display: flex;
+	align-items: flex-start; /* flex-stretch */
+	align-items: center;
+	justify-content: center;
+
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+#barraBusqueda {
+	position: relative;
+	width: 80%;
+}
+
+#botonBusqueda {
+	position: relative;
+}
+
+#headerLogin {
+	order: 3;
+	flex: 0 0 80px;
+
+	display: flex;
+	align-items: flex-start; /* flex-stretch */
+	align-items: center;
+	justify-content: center;
+}
+
+#headerSingup {
+	order: 3;
+	flex: 0 0 80px;
+
+	display: flex;
+	align-items: flex-start; /* flex-stretch */
+	align-items: center;
+	justify-content: center;
+}
+
+/*Para los links de login y singup*/
+header > * > a:link,
+header > * > a:visited {
+	text-decoration: none;
+	color: white;
+}
+header > * > a:hover,
+header > * > a:active {
+	text-decoration: none;
+	color: white;
+	font-size: 110%;
+}
+
+#carrito {
+	order: 4;
+	flex: 0 0 60px;
+
+	display: flex;
+	align-items: flex-start; /* flex-stretch */
+	align-items: center;
+	justify-content: center;
+
+	margin-right: 20px;
+}
+
+/* --- BODY --- */
+
+body {
+	font-family: 'Helvetica', 'Arial', sans-serif;
+
+	padding-top: 80px; /* Relleno superior igual a la altura de la cabecera*/
+	margin: 0px;
+}
+
+#content {
+	display: -webkit-flex;
+	display: flex;
+	align-items: flex-start; /* flex-stretch */
+	align-items: stretch;
+
+	min-height: 1000px;
+}
+
+/* --- ASIDE --- */
+
+#aside-container {
+	/*width: 15%;*/
+	flex: 0 0 180px;
+	order: 1;
+	border: 1px solid black;
+
+	display: none;
+}
+
+aside {
+	position: sticky;
+	top: 81px;
+}
+
+#categoriasTitle {
+	/*background: #005b9f;*/
+	color: white;
+
+	background: linear-gradient(to bottom, #003270 0%, #005b9f 30%);
+}
+
+#categorias {
+	width: 100%;
+	margin: auto;
+	padding: 0;
+
+	list-style-type: none;
+
+	display: -webkit-flex;
+	display: flex;
+	align-items: flex-start; /* flex-stretch */
+	align-items: stretch;
+
+	flex-direction: column;
+
+	justify-content: space-around;
+
+	overflow: hidden;
+}
+
+#categorias > li {
+	margin: auto;
+	width: 100%;
+
+	order: 1;
+	flex: 0 0 5%;
+
+	display: flex;
+	align-items: flex-start; /* flex-stretch */
+	align-items: center;
+	justify-content: center;
+	/*Hago un flex para centrar el interior*/
+}
+
+#categorias > li:hover {
+	background-color: #5087d1;
+}
+
+#categorias > li > a:link,
+#categorias > li > a:visited,
+#categorias > li > a:hover,
+#categorias > li > a:active {
+	text-decoration: none;
+	color: black;
+}
+
+/*
+.categoriaSeleccionada {
+	background-color: #5087d1;
+}
+*/
+
+section {
+	-webkit-flex: 1;
+	flex: 1 1 auto;
+	order: 2;
+
+	border: 1px solid black;
+}
+
+section > * {
+	width: 80%;
+	margin: auto;
+}
+
+.sectionTitle {
+}
+
+.underHeader {
+	width: 100%;
+	border: 1px solid black;
+}
+
+.underHeader > p {
+	margin: 1px;
+}
+
+#traza {
+	/*background: #005b9f;*/
+	color: white;
+
+	background: linear-gradient(to bottom, #003270 0%, #005b9f 30%);
+}
+
+/* --- View: HOME--- */
+
+#anuncio {
+}
+
+#imagenAnuncio {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+#catDestacadas {
+	list-style: none;
+
+	/*Es un flex*/
+
+	display: -webkit-flex;
+	display: flex;
+	align-items: flex-start; /* flex-stretch */
+	align-items: stretch;
+
+	background-color: white;
+}
+
+#catDestacadas > a {
+	font-size: larger;
+	background-color: #0288d1;
+
+	text-decoration: none;
+	color: white;
+
+	text-align: center;
+	line-height: 50px;
+
+	margin: 20px;
+
+	flex: 0 1 30%;
+}
+
+/* --- View: CATEGORIAS--- */
+
+.productos {
+	/*width: 80%;*/
+	margin: auto;
+	padding-top: 30px;
+
+	display: grid;
+	grid-template-columns: 25% 25% 25%;
+	grid-column-gap: 1px;
+
+	justify-items: center;
+	justify-content: space-around;
+
+	grid-auto-flow: row;
+}
+
+.productos > a {
+	text-decoration: none;
+	color: black;
+}
+
+.producto {
+	margin-top: 1px;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+
+.producto:hover {
+	border: #5087d1 solid 1px;
+	border-radius: 20px;
+
+	margin-top: 1px;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+}
+
+.producto > a {
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+	justify-content: center;
+
+	text-decoration: none;
+	color: black;
+}
+
+.imagenProducto {
+	width: 100%;
+	padding-top: 20px;
+}
+
+.precioProducto {
+	margin: 2px;
+}
+
+.nombreProducto {
+	margin: 2px;
+}
+
+/* --- View: PRODUCTO--- */
+
+#contenedorProducto {
+	margin: auto;
+
+	display: -webkit-flex;
+	display: flex;
+	align-items: flex-start; /* flex-stretch */
+	align-items: stretch;
+
+	justify-content: space-between;
+}
+
+#contenedorProductoImagen {
+	flex: 0 1 47%;
+	order: 1;
+
+	margin: 20px;
+}
+
+#contenedorProductoImagen > .imagenProductoProducto {
+	position: sticky;
+	z-index: 5;
+	top: 140px;
+
+	width: 90%;
+}
+
+#contenedorProductoDatos {
+	flex: 0 1 47%;
+	order: 2;
+}
+
+#contenedorProductoDatos > .nombre {
+	font-size: 200%;
+	font-weight: bold;
+}
+
+#contenedorProductoDatos > .precio {
+	font-size: 150%;
+	font-weight: 500;
+}
+
+#contenedorBotonesCompra {
+	display: -webkit-flex;
+	display: flex;
+	align-items: flex-start; /* flex-stretch */
+	align-items: stretch;
+
+	justify-content: flex-start;
+}
+
+.botonCompra {
+	background-color: #0288d1;
+	padding-left: 10px;
+	padding-right: 10px;
+
+	margin-right: 20px;
+
+	text-decoration: none;
+	color: white;
+
+	/*Para hacer que aparezca la mano como si fuera un enlace*/
+	cursor: pointer;
+}
+
+/* --- VIEW: CARRITO ---*/
+
+#contenedorCarrito {
+	margin: auto;
+
+	display: -webkit-flex;
+	display: flex;
+	/*align-items: flex-start;  flex-stretch */
+	align-items: stretch;
+
+	justify-content: space-between;
+}
+
+#productosCarritoParteFlex {
+	/*Es interno a un flex*/
+	flex: 0 1 100%;
+	order: 1;
+
+	margin: auto;
+	padding-top: 30px;
+}
+
+#productosCarritoParteGrid {
+	/*Contiene un grid*/
+	display: grid;
+	grid-template-columns: 25% 25% 25%;
+	grid-column-gap: 1px;
+
+	justify-items: center;
+	justify-content: space-around;
+
+	grid-auto-flow: row;
+}
+
+#productosCarritoParteGrid > a {
+	text-decoration: none;
+	color: black;
+}
+
+/*Vamos a hacer que unGridEnCarrito sea un flex column para que
+El boton de elminar venga primero en la jerarquia pero salga
+segundo en la pagina, y asi poder hacer que el css cambie
+a los sibling que vienen despues*/
+
+.unGridEnCarrito {
+	display: flex;
+	align-items: flex-start; /* flex-stretch */
+	align-items: center;
+	justify-content: center;
+
+	flex-direction: column;
+}
+
+.unGridEnCarrito > .producto {
+	flex: 1 1 auto;
+	order: 1;
+}
+
+.cantidadProducto {
+	margin: 2px;
+}
+
+.centroEliminar {
+	flex: 1 1 auto;
+	order: 2;
+
+	display: flex;
+	align-items: flex-start; /* flex-stretch */
+	align-items: center;
+	justify-content: center;
+}
+
+.centroEliminar > a {
+	text-decoration: none;
+	color: black;
+}
+
+.centroEliminar:hover a {
+	color: red;
+}
+
+.centroEliminar:hover ~ .producto {
+	border: red solid 1px;
+	border-radius: 20px;
+}
+
+#botonesCarrito {
+	margin-top: 40px;
+
+	/*Es parte de un flex*/
+	flex: 0 0 200px;
+	order: 2;
+
+	/*Contiene un flex*/
+	display: -webkit-flex;
+	display: flex;
+	align-items: stretch;
+
+	justify-content: flex-start;
+
+	flex-direction: column;
+}
+
+#botonesCarrito > a {
+	text-decoration: none;
+	color: white;
+}
+
+.botonCompraCarrito {
+	display: flex;
+	align-items: flex-start; /* flex-stretch */
+	align-items: center;
+	justify-content: center;
+
+	background-color: #0288d1;
+	padding-left: 10px;
+	padding-right: 10px;
+
+	margin-bottom: 20px;
+}
+
+/* --- VIEW: LISTA COMPRAS ---*/
+
+.productosComprasParteGrid {
+	/*Contiene un grid*/
+	display: grid;
+	grid-template-columns: 25% 25% 25%;
+	grid-column-gap: 1px;
+
+	justify-items: center;
+	justify-content: space-around;
+
+	grid-auto-flow: row;
+}
+
+.estadoProducto {
+	margin: 2px;
+}
+
+/* --- VIEW: PREPAGO ---*/
+
+#botonesProcederPago {
+	width: 200px;
+}
+
+#botonesProcederPago > a {
+	text-decoration: none;
+	color: white;
+}
+
+/* --- VIEW: FOOTER ---*/
+
+footer {
+	border: solid black 1px;
+}
